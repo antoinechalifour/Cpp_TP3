@@ -2,6 +2,7 @@
 #include "CStack.h"
 #include "C_Pile.h"
 #include "C_File.h"
+#include "CVecteur.h"
 #include "operators.h"
 
 using namespace std;
@@ -35,6 +36,7 @@ int main()
     */
 
     //1 1.2 - Liaison dynamique
+    /*
     try{
         CStack* ptStack;
         int res;
@@ -56,6 +58,28 @@ int main()
         *ptStack>res;
         cout<<"Dernier element depile : "<<res<<endl;
         cout<<*ptStack<<" - index last : "<<ptStack->getLast()<<endl;
+    }
+    catch(int e){
+        cout<<e<<" - bad index exception."<<endl;
+    }
+    */
+
+    //2 - Transtypage
+    CVecteur v;
+    C_Pile pile, *pPile;
+    C_File file, *pFile;
+
+    try{
+        v[0]=&pile;
+        v[1]=&file;
+
+        pPile = dynamic_cast<C_Pile*> (v[0]);
+        if(pPile) cout<<"OK"<<endl;
+        else cout<<"KO"<<endl;
+
+        pFile = dynamic_cast<C_File*> (v[1]);
+        if(pFile) cout<<"OK"<<endl;
+        else cout<<"KO"<<endl;
     }
     catch(int e){
         cout<<e<<" - bad index exception."<<endl;

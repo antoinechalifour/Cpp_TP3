@@ -1,10 +1,7 @@
 #include "C_File.h"
 
 C_File::C_File(int size):
-    CStack(size)
-{
-    queue=-1;
-}
+    CStack(size), queue(-1){}
 
 C_File& C_File::operator<(int i){
     if(queue+1>=size) throw -1;

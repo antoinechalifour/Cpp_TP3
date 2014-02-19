@@ -1,10 +1,6 @@
 #include "C_Pile.h"
 
-C_Pile::C_Pile(int size):
-    CStack(size)
-{
-    sommet=-1;
-}
+C_Pile::C_Pile(int size): CStack(size), sommet(-1){}
 
 C_Pile& C_Pile::operator<(int i){
     if(sommet+1>=size) throw -1;

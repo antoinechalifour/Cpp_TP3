@@ -4,6 +4,7 @@
 #include "C_File.h"
 #include "CVecteur.h"
 #include "operators.h"
+#include "Fille.h"
 
 using namespace std;
 
@@ -65,6 +66,7 @@ int main()
     */
 
     //2 - Transtypage
+    /*
     CVecteur v;
     C_Pile pile, *pPile;
     C_File file, *pFile;
@@ -84,6 +86,11 @@ int main()
     catch(int e){
         cout<<e<<" - bad index exception."<<endl;
     }
+    */
+
+    //Exercice Bonus
+    Fille f;
+    f.AfficherI();
 
     return 0;
 }

@@ -11,7 +11,8 @@ private:
 
 public:
     CVecteur(int size=5);
-    CStack*& operator[](int i);
+    CStack*& operator[](int i); //lvalue
+    const CStack*& operator[](int i); //rvalue
 };
 
 #endif // CVECTEUR_H_INCLUDED
